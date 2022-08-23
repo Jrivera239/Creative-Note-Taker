@@ -15,6 +15,51 @@ app.use(express.json());
 
 app.use(express.static("./publc"));
 
+app.get("/api/notes", function(req, res) {
+    readFileAsync("./db/DB.json").then(function(data) {
+        notes = [].concat(json.parse(data))
+        res.json(notes);
+    })
+});
+
+app.post("/api/notes", function(req, res) {
+    const note = req.body;
+    readFileAsyncs ("./db/DB.json", "utf8").then(function (data) {
+        const notes = [].concat (json.parse(data));
+        note.id = notes.length + 1
+        note.push(note);
+        return notes
+    })
+    .the(function (notes) {
+        writeFileAsyncs("./db/DB.json",json.stringify (notes))res.json(note);
+})
+});
+
+app.delete("/api/notes/:id", function(req, res) {
+    const deleteID = parseInt(req.params.id);
+    readFileAsync("./db/DB.json", "uf8").then(function (data) {
+        const notes = [].concat(json.parse(data));
+        const newData = []
+        for (let i = 0; i<notes.length; i ++) {
+            if (deleteID !== notes [i].id) {
+                newData.push(notes [i])
+            }
+        }
+        return newData
+    }).then(function(notes){
+        writeFileAsync("./db/DB.json", json.stringify(notes))
+        res.send("Saved Success!");
+    })
+    })
+
+
+
+
+
+
+
+
+
 
 
 
