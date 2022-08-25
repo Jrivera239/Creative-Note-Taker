@@ -24,14 +24,14 @@ app.get("/api/notes", function(req, res) {
 
 app.post("/api/notes", function(req, res) {
     const note = req.body;
-    readFileAsyncs ("./db/db.json", "utf8").then(function (data) {
+    readFileAsync ("./db/db.json", "utf8").then(function (data) {
         const notes = [].concat (json.parse(data));
         note.id = notes.length + 1
         note.push(note);
         return notes
     })
     .the(function (notes) {
-        writeFileAsyncs("./db/db.json",json.stringify (notes))res.json(note);
+        writeFileAsync("./db/db.json",json.stringify (notes))res.json(note);
 })
 });
 
