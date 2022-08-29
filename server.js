@@ -9,8 +9,8 @@ app.use(express.urlencoded({extended: true}));
 app.use(express.json());
 app.use('/api', apiRoute);
 app.use('/', htmlRoute);
-app.listen(PORT, () => {
-    console.log(`API server now on port http://localhost:${PORT}`)
+app.listen(3001, () => {
+    console.log(`API server now on port 3001`)
 })
 
 
