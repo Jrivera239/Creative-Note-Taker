@@ -1,5 +1,6 @@
-const apiRoute = require('./routes/apiRoutes.js');
-const htmlRoute = require('./routes/htmlRoutes.js');
+const fs = require ('fs');
+const apiRoute = require('./routes/apiRoutes');
+const htmlRoute = require('./routes/htmlRoutes');
 const express = require('express');
 const PORT = process.env.PORT || 3001;
 const app = express();
@@ -10,6 +11,7 @@ app.use(express.static('publc/assets'));
 
 app.use('/api', apiRoute);
 app.use('/', htmlRoute);
+
 app.listen(PORT, ()=> {
-    console.log(`API server now on port http://localhost:${PORT}`)
+    console.log(`API server now on port ${PORT}!`)
 })
