@@ -1,6 +1,8 @@
-
+const fs = require('fs');
+const path = require('path');
 const router = require('express').Router();
 const store = require("../db/db.json");
+
 
 router.get("/notes", (req, res) => {
     store.getNotes().then((notes) => {
