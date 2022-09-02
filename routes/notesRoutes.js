@@ -2,6 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const router = require('express').Router();
 const notes = require('../../db/db.json');
+const { createNewNote, deleteNote } = require('../../lib/notes');
 
 router.get('/db', (req, res) => {
     let result = (notes);

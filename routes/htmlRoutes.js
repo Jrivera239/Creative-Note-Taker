@@ -5,7 +5,7 @@ const router = require('express').Router();
 router.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, '../../publc/index.html'));
 });
-router.get("/notes",(req, res) => {
+router.get("/db",(req, res) => {
     res.sendFile(path.join(__dirname, '../publc/assets/notes.html'));
 });
 router.get("*",(req,res) => {
