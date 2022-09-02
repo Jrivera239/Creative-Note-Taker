@@ -1,4 +1,5 @@
 const fs = require ('fs');
+const path = require('path');
 const apiRoute = require('./routes/apiRoutes');
 const htmlRoute = require('./routes/htmlRoutes');
 const express = require('express');
