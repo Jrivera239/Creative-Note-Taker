@@ -9,7 +9,6 @@ const app = express();
 app.use(express.urlencoded({extended: true}));
 app.use(express.json());
 app.use(express.static('publc/assets'));
-
 app.use('/api', apiRoute);
 app.use('/', htmlRoute);
 
