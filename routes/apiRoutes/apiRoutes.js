@@ -2,7 +2,8 @@ const router = require('express').Router();
 const fs = require('fs');
 const path = require('path');
 const uniqid = require('uniqid');
-const note = require('../db/db.json')
+const note = require('../db/db.json');
+const notesRoutes = require('../apiRoutes/notesRoutes');
 
 router.get('/notes', (req, res) => {
     res.json(note);
