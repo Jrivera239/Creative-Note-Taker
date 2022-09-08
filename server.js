@@ -8,7 +8,7 @@ const app = express();
 
 app.use(express.urlencoded({extended: true}));
 app.use(express.json());
-app.use(express.static('C:\Users\joelr\Documents\GitHub\Creative-Note-Taker\public\assets'));
+app.use(express.static('public'));
 app.use('/api', apiRoute);
 app.use('/', htmlRoute);
 
