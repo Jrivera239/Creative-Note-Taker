@@ -26,7 +26,8 @@ THEN I am presented with empty fields to enter a new note title and the note’s
 -JavaScript
 -Node.js
 -Express.js
-
+## Screenshot
+![note-taker-creative herokuapp com_notes](https://user-images.githubusercontent.com/106676739/189235280-32bee5e3-ebb7-4e0e-885f-9dbd680ea03c.png)
 
 ## Repository
 
@@ -34,4 +35,4 @@ https://github.com/Jrivera239/Creative-Note-Taker
 
 ## Heroku
 
-https://note-taker-creative.herokuapp.com/
+[https://note-taker-creative.herokuapp.com/](https://note-taker-creative.herokuapp.com/notes)
